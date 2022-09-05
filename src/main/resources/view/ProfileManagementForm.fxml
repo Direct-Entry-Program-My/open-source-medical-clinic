@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep9.clinic.controller.ProfileManagementFormController">
+   <children>
+      <Label layoutX="201.0" layoutY="20.0" text="PROFILE MANAGEMENT">
+         <font>
+            <Font name="Cantarell Extra Bold" size="19.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblProfiles" layoutX="16.0" layoutY="61.0" prefHeight="200.0" prefWidth="569.0" style="-fx-background-color: #DCFAA6;">
+        <columns>
+          <TableColumn prefWidth="75.0" text="NO" />
+          <TableColumn prefWidth="75.0" text="TYPE" />
+            <TableColumn prefWidth="115.0" text="NAME" />
+            <TableColumn prefWidth="184.0" text="ADDRESS" />
+            <TableColumn prefWidth="119.0" text="CONTACT" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="100.0" layoutY="302.0" spacing="70.0">
+         <children>
+            <JFXButton fx:id="btnAdd" buttonType="RAISED" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: #A1FAEC;" text="ADD" />
+            <JFXButton fx:id="btnModify" buttonType="RAISED" onAction="#btnModifyOnAction" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: #A1FAEC;" text="MODIFY" />
+            <JFXButton fx:id="btnDelete" buttonType="RAISED" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: #A1FAEC;" text="DELETE" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
