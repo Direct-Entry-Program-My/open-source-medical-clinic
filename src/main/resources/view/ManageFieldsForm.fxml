@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="419.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep9.clinic.controller.ManageFieldsFormController">
+   <children>
+      <Label layoutX="207.0" layoutY="24.0" text="MANAGE FIELDS">
+         <font>
+            <Font name="Cantarell Extra Bold" size="23.0" />
+         </font>
+      </Label>
+      <VBox layoutX="482.0" layoutY="99.0" spacing="100.0">
+         <children>
+            <JFXButton fx:id="btnSave" buttonType="RAISED" onAction="#btnSaveOn" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #A1FAEC;" text="SAVE" />
+            <JFXButton fx:id="btnNew" buttonType="RAISED" onAction="#btnNewOnAction" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #A1FAEC;" text="NEW" />
+            <JFXButton fx:id="btnDelete" buttonType="RAISED" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="77.0" style="-fx-background-color: #A1FAEC;" text="DELETE" />
+         </children>
+      </VBox>
+      <JFXTextField fx:id="txtField" alignment="CENTER" layoutX="92.0" layoutY="91.0" prefHeight="26.0" prefWidth="343.0" promptText="NEW FIELD" />
+      <JFXListView fx:id="lstFields" layoutX="95.0" layoutY="134.0" prefHeight="252.0" prefWidth="343.0" />
+   </children>
+</AnchorPane>
