@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="525.0" prefWidth="496.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep9.clinic.controller.AddModifyProfileFormController">
+   <children>
+      <Label layoutX="175.0" layoutY="20.0" text="ADD/MODIFY PROFILE">
+         <font>
+            <Font name="Cantarell Extra Bold" size="16.0" />
+         </font>
+      </Label>
+      <VBox layoutX="25.0" layoutY="60.0" spacing="29.0">
+         <children>
+            <Label text="PROFILE TYPE" />
+            <Label text="NAME" />
+            <Label text="USERNAME" />
+            <Label text="FIELD" />
+            <Label text="GENDER" />
+            <Label text="NIC" />
+            <Label text="CONTACT" />
+            <Label text="ADDRESS" />
+            <Label text="PASSWORD" />
+         </children>
+      </VBox>
+      <VBox layoutX="227.0" layoutY="60.0" spacing="20.0">
+         <children>
+            <ComboBox fx:id="cmbProfileType" prefHeight="26.0" prefWidth="221.0" />
+            <TextField fx:id="txtName" prefHeight="26.0" prefWidth="221.0" />
+            <TextField fx:id="txtUsername" prefHeight="26.0" prefWidth="221.0" />
+            <ComboBox fx:id="cmbField" prefHeight="26.0" prefWidth="221.0" />
+            <ComboBox fx:id="cmbGender" prefHeight="26.0" prefWidth="221.0" />
+            <TextField fx:id="txtNIC" prefHeight="26.0" prefWidth="221.0" />
+            <TextField fx:id="txtContact" prefHeight="26.0" prefWidth="221.0" />
+            <TextField fx:id="txtAddress" prefHeight="26.0" prefWidth="221.0" />
+            <TextField fx:id="txtPassword" prefHeight="26.0" prefWidth="221.0" />
+         </children>
+      </VBox>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="369.0" layoutY="477.0" onAction="#btnSaveOnAction" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #A1FAEC;" text="SAVE" />
+      <JFXButton fx:id="btnReset" buttonType="RAISED" layoutX="224.0" layoutY="477.0" onAction="#btnResetOnAction" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #A1FAEC;" text="RESET" />
+   </children>
+</AnchorPane>
