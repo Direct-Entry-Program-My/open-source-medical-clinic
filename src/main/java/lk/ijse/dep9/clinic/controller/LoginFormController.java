@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import lk.ijse.dep9.clinic.security.SecurityContextHolder;
 import lk.ijse.dep9.clinic.security.User;
 import lk.ijse.dep9.clinic.security.UserRole;
+import misc.CryptoUtil;
 
 import java.io.IOException;
 import java.sql.*;
@@ -56,13 +57,21 @@ public class LoginFormController {
 
             /* enhancing security for SQL injections with prepareStatement */
 
-            String sql = "SELECT role FROM User WHERE username =? AND password =?";
+            String sql = "SELECT role, password FROM User WHERE username =?";
             PreparedStatement stm = connection.prepareStatement(sql);
             stm.setString(1,username);
-            stm.setString(2,password);
+            //stm.setString(2,password);
             ResultSet rst = stm.executeQuery();
 
             if(rst.next()){
+                String cipherText = rst.getString("password");
+                if(!CryptoUtil.getSha256Hex(password).equals(cipherText)){
+                    new Alert(Alert.AlertType.ERROR,"Invalid Login Credentials").show();
+                    txtUsername.requestFocus();
+                    txtUsername.selectAll();
+                    return;
+                }
+
                 String role = rst.getString("role");
                 System.out.println(role);
                 SecurityContextHolder.setPrincipal(new User(username, UserRole.valueOf(role)));  // UserRole.valueOf(role)
