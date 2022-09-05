@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep9.clinic.controller.AdminDashboardFromController">
+<AnchorPane prefHeight="496.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep9.clinic.controller.AdminDashboardFromController">
    <children>
-      <Label alignment="CENTER" layoutX="202.0" layoutY="39.0" text="Admin Dashboard" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Label alignment="CENTER" layoutY="96.0" text="Admin Dashboard" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
-            <Font size="23.0" />
+            <Font name="Cantarell Extra Bold" size="23.0" />
          </font>
       </Label>
+      <ImageView fitHeight="88.0" fitWidth="88.0" layoutX="14.0" layoutY="7.0">
+         <image>
+            <Image url="@../assets/MediCare.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="149.0" layoutY="35.0" text="MEDICARE CHANNELING CENTER">
+         <font>
+            <Font name="Cantarell Extra Bold" size="23.0" />
+         </font>
+      </Label>
+      <VBox layoutX="212.0" layoutY="203.0" spacing="30.0">
+         <children>
+            <JFXButton fx:id="btnProfileManage" buttonType="RAISED" onAction="#btnProfileManageOnAction" style="-fx-background-color: #A1FAEC;" text="Profile Management">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnViewRecords" buttonType="RAISED" onAction="#btnViewRecordsOnAction" prefHeight="32.0" prefWidth="176.0" style="-fx-background-color: #A1FAEC;" text="View Records">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnSettings" buttonType="RAISED" onAction="#btnSettingsOnAction" prefHeight="32.0" prefWidth="176.0" style="-fx-background-color: #A1FAEC;" text="Settings">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnLogOut" buttonType="RAISED" onAction="#btnLogOutOnAction" prefHeight="32.0" prefWidth="176.0" style="-fx-background-color: #A1FAEC;" text="Log Out">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
